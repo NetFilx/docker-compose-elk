@@ -1,8 +1,4 @@
-FROM hub.c.163.com/library/logstash:5.2.1
-
-RUN mkdir /home/logs/
-COPY ./logs /home/logs/
-RUN chmod -R 777 /home/logs/
+FROM docker.elastic.co/logstash/logstash:5.3.0
 
 # Add your logstash plugins setup here
 # Example: RUN logstash-plugin install logstash-filter-json
