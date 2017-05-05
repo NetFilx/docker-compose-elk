@@ -6,6 +6,16 @@ docker，docker-compose
 
 ## 使用方法
 
+### CentOS 用户
+
+**SELinux**
+
+On distributions which have SELinux enabled out-of-the-box you will need to either re-context the files or set SELinux into Permissive mode in order for docker-elk to start properly. For example on Redhat and CentOS, the following will apply the proper context:
+
+```shell
+$ chcon -R system_u:object_r:admin_home_t:s0 docker-elk/
+```
+
 ### 启动
 
 终端中进入docker-compose.yml的同级目录，在终端中输入
