@@ -1,7 +1,7 @@
 version: '2'
 services:
   filebeat:
-    image: olinicola/filebeat:1.0.1 
+    image: olinicola/filebeat:1.2.3
     container_name: filebeat 
     restart: always
     network_mode: "bridge"
